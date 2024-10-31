@@ -185,7 +185,6 @@ const Taskbar = () => {
         </span>
       </div>
 
-      {/* Right section with the clock */}
       <div className="flex items-center">
         <span className="text-xs mr-2">
           <svg

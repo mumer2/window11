@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Image from "next/image";
-
+import { Topbar1 } from "./Topbar1";
 
 export default function MyComputer({ onClose }) {
   const [isMinimized, setIsMinimized] = useState(false);
@@ -84,9 +84,7 @@ export default function MyComputer({ onClose }) {
         </div>
       )} */}
 
-    <div className="mt-4">
-          <p>Your files and folders go here.</p>
-        </div>
+      <Topbar1/>
     </div>
   );
 }
