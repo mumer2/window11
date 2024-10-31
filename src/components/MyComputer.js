@@ -8,7 +8,6 @@ export default function MyComputer({ onClose }) {
   const handleMinimize = () => {
     setIsMinimized(!isMinimized);
   };
-
   return (
     <div
       className={`fixed w-full h-${

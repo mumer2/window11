@@ -5,13 +5,17 @@ import Image from "next/image";
 // import sun from "/Images/sun.png";
 import DateTime from "./DateTime";
 
-
 const Taskbar = () => {
   return (
     <div className="fixed bottom-0 w-full h-12 bg-slate-200 z-50 flex justify-between items-center px-2 shadow-md">
       <div className="flex items-center space-x-3 ">
-        <Image className="ml-3" src={"/images/sun.png"} width={26} height={26} alt="sun" />
-      
+        <Image
+          className="ml-3"
+          src={"/images/sun.png"}
+          width={26}
+          height={26}
+          alt="sun"
+        />
       </div>
 
       <div className="flex items-center space-x-5 ">
@@ -266,7 +270,7 @@ const Taskbar = () => {
           </svg>
         </span>
         <span className="text-xs">
-          <DateTime/>
+          <DateTime />
         </span>
 
         <span className="text-xs mr-3">
