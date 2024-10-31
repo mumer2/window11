@@ -18,7 +18,7 @@ export default function Home() {
     setShowMyComputer(false);
   };
   return (
-    <div className="bg relative h-screen bg-[url('/Images/Window11.jpeg')] bg-cover bg-center">
+    <div className="bg relative h-screen bg-[url('/images/Window11.jpeg')] bg-cover bg-center">
       {showMyComputer && <MyComputer onClose={closeMyComputer} />} 
       
       <div className="grid p-4">
