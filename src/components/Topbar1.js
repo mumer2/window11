@@ -3,7 +3,7 @@ import React from 'react'
 export const Topbar1 = () => {
   return (
     <div>
-        <div className="fixed h-12 flex justify-between cursor-pointer items-center">
+        <div className="fixed h-12 flex justify-between cursor-pointer items-center w-full border-b-2 border-slate-300">
         <div className="flex items-center space-x-5 ">
           <span>
             <svg
@@ -81,9 +81,9 @@ export const Topbar1 = () => {
           </span>
         </div>
 
-      <div className="flex items-center ml-auto">
+      <div className="flex items-center  ml-auto">
         <span>
-      <div className="relative my-6">
+      <div className="relative mr-4">
         <input
           id="id-s01"
           type="search"

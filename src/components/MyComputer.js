@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Topbar1 } from "./Topbar1";
+import { Topbar2 } from "./Topbar2";
+import MainLayout, { MainLaout } from "./MainLayout";
 
 export default function MyComputer({ onClose }) {
   const [isMinimized, setIsMinimized] = useState(false);
@@ -12,10 +14,10 @@ export default function MyComputer({ onClose }) {
     <div
       className={`fixed w-full h-${
         isMinimized ? "15" : "90"
-      } bottom-12 top-0 bg-white p-4 z-50 border`}
+      } bottom-12 top-0 bg-white z-50 border`}
     >
       <div className="flex justify-between items-center bg-slate-200 border-b ">
-        <div className="bg-gray-200 w-52 p-3 top-0 rounded ">
+        <div className="bg-white ml-3 w-52 p-3 top-0 rounded ">
         <h2 className="flex inline gap-2 text-sm font-bold">
         <Image
             src={"/images/d1.png"}
@@ -85,6 +87,10 @@ export default function MyComputer({ onClose }) {
       )} */}
 
       <Topbar1/>
+
+      <Topbar2/>
+      
+      <MainLayout/>
     </div>
   );
 }
