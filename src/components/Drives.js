@@ -15,6 +15,7 @@ function Drives() {
         onDoubleClick={handleDoubleClick}
       >
         <svg
+          className={`transform transition-transform ${showDisks ? 'rotate-180' : 'rotate-0'}`}
           xmlns="http://www.w3.org/2000/svg"
           width="1em"
           height="1em"

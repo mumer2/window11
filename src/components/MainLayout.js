@@ -1,12 +1,18 @@
 import React from 'react';
 import Image from 'next/image';
 import Drives from './Drives';
+import { useState } from 'react';
 
 const MainLayout = () => {
+  const [showDrives, setShowDrives] = useState(false);
+
+  const toggleDrives = () => {
+    setShowDrives(!showDrives); 
+  };
   return (
     <div>
     <div className="flex h-screen mt-20">
-      <div className="w-1/7 h-[calc(90vh-5rem)] mt-3 overflow-y-auto">
+      <div className="w-1/7 h-[calc(80vh-5rem)] mt-3 overflow-y-auto">
         <ul className="space-y-2 mt-2">
           <li className="flex items-center text-xs pl-10 pr-10 space-x-2 cursor-pointer hover:bg-slate-200 p-2 rounded">
             <span>
@@ -68,69 +74,94 @@ const MainLayout = () => {
             </span>
             <span>Videos</span>
           </li>
+          <hr className='border-slate-300'/>
 
-          <li className="flex items-center text-xs pl-10 pr-10 space-x-2 cursor-pointer hover:bg-slate-200 p-2 rounded">
-            <span>
-              <Image src={"/images/pictures.png"} width={20} height={20} alt='pictures'/>
+          <li className="flex items-center text-xs pl-1 pr-10 space-x-2 cursor-pointer  p-2 rounded">
+          <div>
+        <div
+          className="cursor-pointer hover:bg-slate-200 flex p-2 rounded"
+          onClick={toggleDrives}
+        >
+          <svg
+            className={`transform transition-transform ${showDrives ? 'rotate-180' : 'rotate-0'}`}
+            xmlns="http://www.w3.org/2000/svg"
+            width="1em"
+            height="1em"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill="currentColor"
+              fillRule="evenodd"
+              d="m8 10.207l3.854-3.853l-.707-.708L8 8.793L4.854 5.646l-.708.708z"
+              clipRule="evenodd"
+            />
+          </svg>
+          <span>
+              <Image className='ml-5' src={"/images/d1.png"} width={15} height={15} alt='pictures'/>
             </span>
-            <span>Pictures</span>
+          <span className='ml-2'>This PC</span>
+
+        </div>
+
+        {showDrives && (
+          <div className="ml-2 mt-2 space-y-2">
+            <div className="flex items-center  hover:bg-slate-200 gap-2 p-2 rounded">
+              <span className=" relative">
+              <Image
+                className="absolute"
+                src={"/images/devicon--windows11.png"}
+                width={8}
+                height={8}
+                alt="windows icon"
+              />
+              <Image
+                src={"/images/harddisc1.png"}
+                width={16}
+                height={16}
+                alt="disk"
+              />
+            </span>
+              <span>Local Disk (C:)</span>
+            </div>
+            <div className="flex items-center hover:bg-slate-200 gap-2 p-2 bg-white rounded">
+            <span>
+              <Image
+                src={"/images/harddisc1.png"}
+                width={16}
+                height={16}
+                alt="disk"
+              />
+            </span>
+              <span>Drive (D:)</span>
+            </div>
+          </div>
+        )}
+      </div>
           </li>
 
-          <li className="flex items-center text-xs pl-10 pr-10 space-x-2 cursor-pointer hover:bg-slate-200 p-2 rounded">
-            <span>
-              <Image src={"/images/pictures.png"} width={20} height={20} alt='pictures'/>
+          <li className="flex items-center text-xs pl-11 pr-10 space-x-2 cursor-pointer hover:bg-slate-200 p-2 rounded">
+          <span className=" relative">
+              <Image
+                className="absolute"
+                src={"/images/globe.png"}
+                width={8}
+                height={8}
+                alt="windows icon"
+              />
+              <Image
+                src={"/images/d1.png"}
+                width={16}
+                height={16}
+                alt="disk"
+              />
             </span>
-            <span>Pictures</span>
+            <span>Network</span>
           </li>
 
-          <li className="flex items-center text-xs pl-10 pr-10 space-x-2 cursor-pointer hover:bg-slate-200 p-2 rounded">
-            <span>
-              <Image src={"/images/pictures.png"} width={20} height={20} alt='pictures'/>
-            </span>
-            <span>Pictures</span>
-          </li>
         </ul>
       </div>
 
-      {/* <div className="flex-grow bg-white p-6">
-        <div className='flex cursor-pointer hover:bg-slate-200 p-2 h-8'>
-      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16"><path fill="#c15777" fill-rule="evenodd" d="m8 10.207l3.854-3.853l-.707-.708L8 8.793L4.854 5.646l-.708.708z" clip-rule="evenodd"/></svg>
-        <h2 className="text-xs text-blue-800 font-thin mb-4">Devices and drives</h2>
-        </div>
-        <div className="grid grid-cols-3 gap-4">
-          <div className='flex'>
-          <span className='mt-4'>
-          <Image  className="absolute" src={"/images/devicon--windows11.png"} width={18} height={10} alt='disc'/>
-            <Image src={"/images/harddisc1.png"} width={50} height={50} alt='disc'/>
-          </span>
-          <div className="text-sm border rounded-lg p-4">
-            <h3>Local Disk (C:)</h3>
-           <div className='w-60 h-4.5 border border-gray-400'>
-            <div className='w-20 h-4 bg-blue-400'></div>
-           </div>
-            <p>70 GB free of 100 GB</p>
-          </div>
-          </div>
-
-          <div className='flex'>
-          <span className='mt-4'>
-            <Image src={"/images/harddisc1.png"} width={50} height={50} alt='disc'/>
-          </span>
-          <div className="text-sm border rounded-lg p-4">
-            <h3>Drive (D:)</h3>
-            <div className='w-60 h-4.5 border border-gray-400'>
-            <div className='w-40 h-4 bg-blue-400'></div>
-           </div>
-            <p>100 GB free of 400 GB</p>
-          </div>
-          </div>
-
-         
-        </div>
-      </div>
-</div> */}
-
-<Drives/>
+      <Drives/>
      
      </div>
     </div>
