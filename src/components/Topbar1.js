@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Topbar1 = () => {
+export default function Topbar1({ title}) {
   return (
     <div>
         <div className="fixed h-12 flex justify-between cursor-pointer items-center w-full border-b-2 border-slate-300">
@@ -72,7 +72,7 @@ export const Topbar1 = () => {
           </span>
 
           <span className="font-sm text-gray-800">
-            <p>This PC</p>
+            <p>{title}</p>
           </span>
 
           <span>

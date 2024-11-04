@@ -2,9 +2,10 @@ import { useState } from "react";
 import Image from "next/image";
 import { Topbar2 } from "./Topbar2";
 import MainLayout, { MainLaout } from "./MainLayout";
+import RecycleMain from "./RecycleMain";
 import Topbar1 from "./Topbar1";
 
-export default function MyComputer({ onClose }) {
+export default function RecycleBin({ onClose }) {
   const [isMinimized, setIsMinimized] = useState(false);
 
   const handleMinimize = () => {
@@ -20,12 +21,12 @@ export default function MyComputer({ onClose }) {
         <div className="bg-white ml-3 w-52 p-3 top-0 rounded ">
         <h2 className="flex inline gap-2 text-sm font-bold">
         <Image
-            src={"/images/d1.png"}
+            src={"/images/recycle.png"}
             width={16}
             height={5}
             alt="computer"
           />
-            This PC
+            Recycle Bin
             </h2>
             </div>
         <div className="flex space-x-2">
@@ -86,11 +87,14 @@ export default function MyComputer({ onClose }) {
         </div>
       )} */}
 
-      <Topbar1 title={"This PC"}/>
+      <Topbar1 title={"Recycle Bin"}/>
+      
+      
 
       <Topbar2/>
       
-      <MainLayout/>
+      <RecycleMain
+      />
     </div>
   );
 }
