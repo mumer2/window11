@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Drives from './Drives';
 import { useState } from 'react';
 
-const MainLayout = () => {
+const MainLayout = (z) => {
   const [showDrives, setShowDrives] = useState(false);
 
   const toggleDrives = () => {
