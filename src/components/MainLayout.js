@@ -18,8 +18,10 @@ const MainLayout = () => {
           <Home/>
         </div>;
       case 'Gallery':
-        return <div className='mt-6 p-5'><h2>Gallery</h2><p>This is the gallery section content.</p></div>;
-      case 'Desktop':
+        return <div className='mt-6 p-5 text-center justify-center text-gray-400'><p>This folder is empty.</p></div>;
+        case 'OneDrive':
+          return <div className='mt-6 p-5 text-center justify-center text-gray-400'><p>This folder is empty.</p></div>;
+        case 'Desktop':
         return <div className='flex m-2'>
        <div className="flex flex-col items-center text-black w-24 h-full cursor-pointer hover:bg-slate-200 mt-5 p-2 "      >
         <Image width={60} height={60} src={"/images/Mongo.png"} alt={"MongoDB"} className="w-12 h-12 bg-white rounded p-2" />
@@ -31,15 +33,20 @@ const MainLayout = () => {
       </div>
         </div>;
       case 'Downloads':
-        return <div><h2>Documents</h2><p>This is the documents section content.</p></div>;
+        return <div className='mt-6 p-5 text-center justify-center text-gray-400'><p>This folder is empty.</p></div>;
+
         case 'Documents':
-          return <div><h2>Documents</h2><p>This is the documents section content.</p></div>;
+          return <div className='mt-6 p-5 text-center justify-center text-gray-400'><p>This folder is empty.</p></div>;
+
           case 'Pictures':
-        return <div><h2>Documents</h2><p>This is the documents section content.</p></div>;
+            return <div className='mt-6 p-5 text-center justify-center text-gray-400'><p>This folder is empty.</p></div>;
+
         case 'Music':
-        return <div><h2>Documents</h2><p>This is the documents section content.</p></div>;
+          return <div className='mt-6 p-5 text-center justify-center text-gray-400'><p>This folder is empty.</p></div>;
+
         case 'Videos':
-        return <div><h2>Documents</h2><p>This is the documents section content.</p></div>;
+          return <div className='mt-6 p-5 text-center justify-center text-gray-400'><p>This folder is empty.</p></div>;
+
       case 'This PC':
         return <div><Drives/></div>;
       default:
@@ -52,7 +59,9 @@ const MainLayout = () => {
       {/* Left Sidebar */}
       <div className="w-1/6 h-[calc(80vh-5rem)] mt-3 overflow-y-auto">
         <ul className="space-y-2 mt-2">
-          <li className="flex items-center text-xs pl-10 pr-10 space-x-2 cursor-pointer hover:bg-slate-200 p-2 rounded"
+          <li className={`flex items-center text-xs pl-10 pr-10 space-x-2 cursor-pointer hover:bg-slate-200 p-2 rounded"
+              ${selectedContent === 'Home' ? 'bg-slate-300 border border-black' : ''}`}
+          
           onClick={() => setSelectedContent('Home')}
           >
             <span>
@@ -61,7 +70,9 @@ const MainLayout = () => {
             </span>
             <span>Home</span>
           </li>
-          <li className="flex items-center text-xs pl-10 pr-10 space-x-1 cursor-pointer hover:bg-slate-200 p-2 rounded"
+          <li className={`flex items-center text-xs pl-10 pr-10 space-x-1 cursor-pointer hover:bg-slate-200 p-2 rounded"
+              ${selectedContent === 'Gallery' ? 'bg-slate-300 border border-black' : ''}`}
+           
            onClick={() => setSelectedContent('Gallery')}
           >
             <span>
@@ -69,8 +80,9 @@ const MainLayout = () => {
             </span>
             <span>Gallery</span>
           </li>
-         <li className="flex items-center text-xs pl-10 pr-10 space-x-1 cursor-pointer hover:bg-slate-200 p-2 rounded"
-          onClick={() => setSelectedContent('One Drive')}
+         <li className={`flex items-center text-xs pl-10 pr-10 space-x-1 cursor-pointer hover:bg-slate-200 p-2 rounded"
+          ${selectedContent === 'OneDrive' ? 'bg-slate-300 border border-black' : ''}`}
+          onClick={() => setSelectedContent('OneDrive')}
          >
             <span>
             <svg xmlns="http://www.w3.org/2000/svg" width="1.56em" height="0.8em" viewBox="0 0 256 165"><path fill="#0364b8" d="m154.66 110.682l52.842-50.534c-10.976-42.8-54.57-68.597-97.37-57.62a80 80 0 0 0-46.952 33.51c.817-.02 91.48 74.644 91.48 74.644"/>
@@ -78,15 +90,17 @@ const MainLayout = () => {
             <span>OneDrive</span>
           </li> 
           <hr className='border-slate-300'/>
-          <li className="flex items-center text-xs pl-10 pr-10 space-x-2 cursor-pointer hover:bg-slate-200 p-2 rounded"
-           onClick={() => setSelectedContent('Desktop')}
+          <li className={`flex items-center text-xs pl-10 pr-10 space-x-2 cursor-pointer hover:bg-slate-200 p-2 rounded"
+              ${selectedContent === 'Desktop' ? 'bg-slate-300 border border-black' : ''}`}
+          onClick={() => setSelectedContent('Desktop')}
           >
             <span>
            <Image src={"/images/desktop.png"} width={16} height={14} alt='desktop'/>
                       </span>
             <span>Desktop</span>
           </li> 
-          <li className="flex items-center text-xs pl-10 pr-10 space-x-1 cursor-pointer hover:bg-slate-200 p-2 rounded"
+          <li className={`flex items-center text-xs pl-10 pr-10 space-x-1 cursor-pointer hover:bg-slate-200 p-2 rounded"
+              ${selectedContent === 'Downloads' ? 'bg-slate-300 border border-black' : ''}`}
            onClick={() => setSelectedContent('Downloads')}
           >
             <span>
@@ -94,7 +108,9 @@ const MainLayout = () => {
             <path fill="none" stroke="#00704f" strokeLinecap="round" strokeLinejoin="round" d="M39.236 42.5H8.764M24 33.924V5.5M12.287 22.211L24 33.924l11.713-11.713"/></svg>  </span>
             <span>Downloads</span>
           </li>
-          <li className="flex items-center text-xs pl-10 pr-10 space-x-2 cursor-pointer hover:bg-slate-200 p-2 rounded"
+          <li className={`flex items-center text-xs pl-10 pr-10 space-x-2 cursor-pointer hover:bg-slate-200 p-2 rounded"
+              ${selectedContent === 'Documents' ? 'bg-slate-300 border border-black' : ''}`}
+           
            onClick={() => setSelectedContent('Documents')}
           >
             <span>
@@ -102,7 +118,9 @@ const MainLayout = () => {
             </span>
             <span>Documents</span>
           </li>
-          <li className="flex items-center text-xs pl-10 pr-10 space-x-2 cursor-pointer hover:bg-slate-200 p-2 rounded"
+          <li className={`flex items-center text-xs pl-10 pr-10 space-x-2 cursor-pointer hover:bg-slate-200 p-2 rounded"
+              ${selectedContent === 'Pictures' ? 'bg-slate-300 border border-black' : ''}`}
+           
            onClick={() => setSelectedContent('Pictures')}
           >
             <span>
@@ -111,8 +129,10 @@ const MainLayout = () => {
             <span>Pictures</span>
           </li>
 
-          <li className="flex items-center text-xs pl-10 pr-10 space-x-2 cursor-pointer hover:bg-slate-200 p-2 rounded"
-           onClick={() => setSelectedContent('Music')}
+          <li className={`flex items-center text-xs pl-10 pr-10 space-x-2 cursor-pointer hover:bg-slate-200 p-2 rounded"
+              ${selectedContent === 'Music' ? 'bg-slate-300 border border-black' : ''}`}
+          
+          onClick={() => setSelectedContent('Music')}
           >
             <span>
             <svg xmlns="http://www.w3.org/2000/svg" width="1.6em" height="2em" viewBox="0 0 24 24">
@@ -121,7 +141,9 @@ const MainLayout = () => {
             <span>Music</span>
           </li>
 
-          <li className="flex items-center text-xs pl-10 pr-10 space-x-2 cursor-pointer hover:bg-slate-200 p-2 rounded"
+          <li className={`flex items-center text-xs pl-10 pr-10 space-x-2 cursor-pointer hover:bg-slate-200 p-2 rounded"
+              ${selectedContent === 'Videos' ? 'bg-slate-300 border border-black' : ''}`}
+           
            onClick={() => setSelectedContent('Videos')}
           >
             <span>
@@ -132,13 +154,14 @@ const MainLayout = () => {
           </li>
           <hr className='border-slate-300'/>
 
-          <li className="flex items-center text-xs pl-1 pr-10 space-x-2 cursor-pointer  p-2 rounded"
-          onClick={() => setSelectedContent('This PC')}
+          <li  className={`flex flex-col text-sm cursor-pointer p-2 hover:bg-slate-200
+          ${selectedContent === 'This PC' ? 'bg-slate-300 border border-black' : ''}`}
+        onClick={() => setSelectedContent('This PC')}
           >
           <div>
         <div
-          className="cursor-pointer hover:bg-slate-200 flex p-2 rounded"
-          onClick={toggleDrives}
+         className="flex items-center gap-1  cursor-pointer pr-5 rounded hover:bg-slate-200"
+         onClick={toggleDrives}
         >
           <svg
             className={`transform transition-transform ${showDrives ? 'rotate-180' : 'rotate-0'}`}
@@ -162,8 +185,8 @@ const MainLayout = () => {
         </div>
 
         {showDrives && (
-          <div className="ml-2 mt-2 space-y-2">
-            <div className="flex items-center  hover:bg-slate-200 gap-2 p-2 rounded">
+          <div className="ml-2 mt-2 space-y-2 bg-white">
+            <div className="flex items-center bg-white  hover:bg-slate-200 gap-2 p-2 rounded">
               <span className=" relative">
               <Image
                 className="absolute"
@@ -181,7 +204,7 @@ const MainLayout = () => {
             </span>
               <span>Local Disk (C:)</span>
             </div>
-            <div className="flex items-center hover:bg-slate-200 gap-2 p-2 bg-white rounded">
+            <div className="flex items-center bg-white hover:bg-slate-200 gap-2 p-2 bg-white rounded">
             <span>
               <Image
                 src={"/images/harddisc1.png"}
@@ -197,8 +220,9 @@ const MainLayout = () => {
       </div>
           </li>
 
-          <li className="flex items-center text-xs pl-11 pr-10 space-x-2 cursor-pointer hover:bg-slate-200 p-2 rounded"
-           onClick={() => setSelectedContent('Network')}
+          <li className={`flex items-center text-xs pl-11 pr-10 space-x-2 cursor-pointer hover:bg-slate-200 p-2 rounded"
+              ${selectedContent === 'Network' ? 'bg-slate-300 border border-black' : ''}`}
+          onClick={() => setSelectedContent('Network')}
           >
           <span className=" relative">
               <Image
