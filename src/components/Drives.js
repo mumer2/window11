@@ -9,7 +9,7 @@ function Drives() {
   };
 
   return (
-    <div className="flex-grow bg-white p-5">
+    <div className="flex-grow ml-2 bg-white p-5">
       <div
         className="flex cursor-pointer hover:bg-slate-200 p-2 h-8"
         onDoubleClick={handleDoubleClick}
