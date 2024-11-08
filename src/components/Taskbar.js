@@ -36,7 +36,7 @@ const Taskbar = () => {
 
   return (
     <div className="fixed bottom-0 w-full h-12 bg-slate-200 z-50 flex justify-between items-center px-2 shadow-md">
-     <div className="grid grid-cols-3 gap-[120]">
+     <div className="grid grid-cols-3 gap-[7.4rem]">
       
       <div className="flex items-left space-x-3 hover-bg-white ">
         <Image
