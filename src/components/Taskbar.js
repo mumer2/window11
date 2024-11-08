@@ -517,8 +517,9 @@ const Taskbar = () => {
         </span>
 
         {isWidgetDropupOpen && (
-          <div className="absolute right-2 bottom-14 bg-slate-200 border w-[360] h-[400] bg-white text-black center justify-center border-4 rounded-lg p-3 shadow-lg">
+          <div className="absolute right-2 bottom-14 bg-slate-200 w-[360] h-[400] text-black center justify-center border-4 rounded-lg p-3 shadow-lg">
             <div className="grid mt-3 grid-cols-3 gap-2 mb-4">
+              <div className="text-center">
               <div className="flex">
                 <div className=" flex rounded-s-md border-e-2 border-blue-500 justify-between bg-blue-600 p-3 text-center hover:bg-blue-800  cursor-pointer">
                   <span>
@@ -557,11 +558,15 @@ const Taskbar = () => {
                   </span>
                 </div>
               </div>
+              <span className="text-xs">No Internet</span>
 
+              </div>
+
+              <div className="text-center">
               <div className="flex">
                 <div className=" flex rounded-s-md border-2 border-gray-200 justify-between bg-white p-3 text-center  cursor-pointer">
                   <span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="1.6em" height="1.6em" viewBox="0 0 24 24"><path fill="black" d="M11.5 21.308v-8.1l-5.1 5.1l-.708-.708l5.6-5.6l-5.6-5.6l.708-.708l5.1 5.1v-8.1h.5L17.008 7.7l-4.3 4.3l4.3 4.3L12 21.308zm1-10.516L15.592 7.7L12.5 4.62zm0 8.589l3.092-3.081l-3.092-3.092z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24"><path fill="black" d="M11.5 21.308v-8.1l-5.1 5.1l-.708-.708l5.6-5.6l-5.6-5.6l.708-.708l5.1 5.1v-8.1h.5L17.008 7.7l-4.3 4.3l4.3 4.3L12 21.308zm1-10.516L15.592 7.7L12.5 4.62zm0 8.589l3.092-3.081l-3.092-3.092z"/></svg>
                   </span>
                 </div>
                 <div className=" flex  rounded-e-md border-e-2 border-gray-200 justify-between  p-3 text-center  cursor-pointer">
@@ -582,39 +587,54 @@ const Taskbar = () => {
                   </span>
                 </div>
               </div>
+              <span className="text-xs">Bluetooth</span>
+              </div>
 
+              <div className="text-center">
               <div className="flex">
-                <div className=" flex rounded-s-md border-2 border-gray-200 justify-between bg-white pl-8 pr-8 pt-3 text-center  cursor-pointer">
+                <div className=" flex rounded-s-md border-2 border-gray-200 justify-between bg-white pl-8 pr-8 pt-3 pb-3 text-center  cursor-pointer">
                   <span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 512 512"><path fill="none" stroke="black" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32" d="M407.72 224c-3.4 0-14.79.1-18 .3l-64.9 1.7a1.83 1.83 0 0 1-1.69-.9L193.55 67.56a9 9 0 0 0-6.66-3.56H160l73 161a2.35 2.35 0 0 1-2.26 3.35l-121.69 1.8a8.06 8.06 0 0 1-6.6-3.1l-37-45c-3-3.9-8.62-6-13.51-6H33.08c-1.29 0-1.1 1.21-.75 2.43l19.84 71.42a16.3 16.3 0 0 1 0 11.9L32.31 333c-.59 1.95-.52 3 1.77 3H52c8.14 0 9.25-1.06 13.41-6.3l37.7-45.7a8.19 8.19 0 0 1 6.6-3.1l120.68 2.7a2.7 2.7 0 0 1 2.43 3.74L160 448h26.64a9 9 0 0 0 6.65-3.55L323.14 287c.39-.6 2-.9 2.69-.9l63.9 1.7c3.3.2 14.59.3 18 .3C452 288.1 480 275.93 480 256s-27.88-32-72.28-32"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 512 512"><path fill="none" stroke="black" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32" d="M407.72 224c-3.4 0-14.79.1-18 .3l-64.9 1.7a1.83 1.83 0 0 1-1.69-.9L193.55 67.56a9 9 0 0 0-6.66-3.56H160l73 161a2.35 2.35 0 0 1-2.26 3.35l-121.69 1.8a8.06 8.06 0 0 1-6.6-3.1l-37-45c-3-3.9-8.62-6-13.51-6H33.08c-1.29 0-1.1 1.21-.75 2.43l19.84 71.42a16.3 16.3 0 0 1 0 11.9L32.31 333c-.59 1.95-.52 3 1.77 3H52c8.14 0 9.25-1.06 13.41-6.3l37.7-45.7a8.19 8.19 0 0 1 6.6-3.1l120.68 2.7a2.7 2.7 0 0 1 2.43 3.74L160 448h26.64a9 9 0 0 0 6.65-3.55L323.14 287c.39-.6 2-.9 2.69-.9l63.9 1.7c3.3.2 14.59.3 18 .3C452 288.1 480 275.93 480 256s-27.88-32-72.28-32"/></svg>
                   </span>
                 </div>
               </div>
+              <span className="text-xs">Airplane mode</span>
+              </div>
 
+              <div className="text-center">
               <div className="flex mt-3">
                 <div className=" flex rounded-s-md border-2 border-gray-200 justify-between bg-white pl-8 pr-8 p-3 text-center  cursor-pointer">
                   <span>
-                 <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 20 20"><path fill="black" d="M9 9.564c0-1.237-.618-3.037-1.834-5.276c-.208-.384-.753-.38-.987-.015q-.488.761-1.459 1.555l-.287.227l-.657.507c-1.344 1.082-1.874 2.043-1.757 3.464c.102 1.256.855 2.155 2.147 2.567q-.683.804-1.806 1.274a.59.59 0 0 0-.316.77c.124.3.465.442.762.318c1.425-.595 2.448-1.551 3.041-2.853q.334-.73.532-1.439l.033-.122l.08-.324l.053-.26l.032-.185l.052-.374q.05-.445.043-.88L6.669 8.5a.586.586 0 0 1 .573-.562a.586.586 0 0 1 .592.58q.027 1.72-.688 3.504l-.02.07a.36.36 0 0 0 .026.21c.08.18.29.26.467.178l.09-.045a1 1 0 0 0 .151-.107C8.422 11.838 9 10.801 9 9.564m6.994-2.21A2.5 2.5 0 0 0 13.498 5H9.534c-.313 0-.536.14-.536.498s.2.496.536.496h4.22l.12.006a1.25 1.25 0 0 1 1.13 1.244v5.506l-.006.12A1.25 1.25 0 0 1 13.754 14H5.998c-.301 0-.502.193-.502.495c0 .303.2.5.502.505h7.5l.147-.004a2.5 2.5 0 0 0 2.353-2.496v-.819h1.167l.112-.007a.83.83 0 0 0 .721-.826V9.182l-.006-.102a.834.834 0 0 0-.827-.732l-1.167-.015V7.5z"/></svg>             </span>
+                 <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.3em" viewBox="0 0 20 20"><path fill="black" d="M9 9.564c0-1.237-.618-3.037-1.834-5.276c-.208-.384-.753-.38-.987-.015q-.488.761-1.459 1.555l-.287.227l-.657.507c-1.344 1.082-1.874 2.043-1.757 3.464c.102 1.256.855 2.155 2.147 2.567q-.683.804-1.806 1.274a.59.59 0 0 0-.316.77c.124.3.465.442.762.318c1.425-.595 2.448-1.551 3.041-2.853q.334-.73.532-1.439l.033-.122l.08-.324l.053-.26l.032-.185l.052-.374q.05-.445.043-.88L6.669 8.5a.586.586 0 0 1 .573-.562a.586.586 0 0 1 .592.58q.027 1.72-.688 3.504l-.02.07a.36.36 0 0 0 .026.21c.08.18.29.26.467.178l.09-.045a1 1 0 0 0 .151-.107C8.422 11.838 9 10.801 9 9.564m6.994-2.21A2.5 2.5 0 0 0 13.498 5H9.534c-.313 0-.536.14-.536.498s.2.496.536.496h4.22l.12.006a1.25 1.25 0 0 1 1.13 1.244v5.506l-.006.12A1.25 1.25 0 0 1 13.754 14H5.998c-.301 0-.502.193-.502.495c0 .303.2.5.502.505h7.5l.147-.004a2.5 2.5 0 0 0 2.353-2.496v-.819h1.167l.112-.007a.83.83 0 0 0 .721-.826V9.182l-.006-.102a.834.834 0 0 0-.827-.732l-1.167-.015V7.5z"/></svg>             </span>
                 </div>
               </div>
 
-              <div className="flex mt-3">
-                <div className=" flex rounded-s-md border-2 border-gray-200 justify-between bg-white pl-8 pr-8 pt-3 text-center  cursor-pointer">
-                  <span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 48 48"><path fill="black" d="M23.999 4.001c.69 0 1.25.56 1.25 1.25v2.5a1.25 1.25 0 0 1-2.5 0v-2.5c0-.69.56-1.25 1.25-1.25m10.023 20.046c0 5.509-4.466 9.975-9.975 9.975c-5.51 0-9.976-4.466-9.976-9.975c0-5.51 4.466-9.976 9.976-9.976c5.509 0 9.975 4.466 9.975 9.976m8.728 1.203a1.25 1.25 0 0 0 0-2.5h-2.5a1.25 1.25 0 0 0 0 2.5zM23.999 39c.69 0 1.25.56 1.25 1.25v2.5a1.25 1.25 0 0 1-2.5 0v-2.5c0-.69.56-1.25 1.25-1.25M7.75 25.25a1.25 1.25 0 1 0 0-2.5h-2.5a1.25 1.25 0 0 0 0 2.5zM9.366 9.366a1.25 1.25 0 0 1 1.768 0l2.5 2.5a1.25 1.25 0 1 1-1.768 1.768l-2.5-2.5a1.25 1.25 0 0 1 0-1.768m1.768 29.269a1.25 1.25 0 1 1-1.768-1.768l2.5-2.5a1.25 1.25 0 1 1 1.768 1.768zm27.5-29.269a1.25 1.25 0 0 0-1.767 0l-2.5 2.5a1.25 1.25 0 0 0 1.768 1.768l2.5-2.5a1.25 1.25 0 0 0 0-1.768m-1.767 29.269a1.25 1.25 0 1 0 1.768-1.768l-2.5-2.5a1.25 1.25 0 1 0-1.768 1.768z"/></svg>              </span>
-                </div>
+              <span className="text-xs">Battery saver</span>
               </div>
 
+            <div className="text-center">
               <div className="flex mt-3">
-                <div className=" flex rounded-s-md border-2 border-gray-200 justify-between bg-white pl-8 pr-8 pt-3 text-center  cursor-pointer">
+                <div className=" flex rounded-s-md border-2 border-gray-200 justify-between bg-white pl-8 pr-8 pb-3 pt-3 text-center  cursor-pointer">
                   <span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.3em" viewBox="0 0 48 48"><path fill="black" d="M20.002 10.5a4 4 0 0 0 2.226 3.586l.492.179a3.75 3.75 0 0 0 2.566 0l.491-.179a4 4 0 1 0-5.775-3.586m-2.194 1.977A6.5 6.5 0 0 1 24.003 4a6.5 6.5 0 0 1 6.194 8.477l6.1-2.22a4.25 4.25 0 0 1 2.908 7.988l-8.201 2.985v4.796c0 .353.067.703.2 1.03L35.69 38.16a4.25 4.25 0 1 1-7.882 3.185l-3.807-9.422l-3.807 9.421a4.25 4.25 0 0 1-7.882-3.184l4.49-11.112c.132-.327.2-.677.2-1.03V21.23L8.8 18.245a4.25 4.25 0 1 1 2.907-7.987zm3.444 3.914l-10.399-3.784a1.75 1.75 0 0 0-1.197 3.289l8.365 3.044a2.25 2.25 0 0 1 1.481 2.114v4.964c0 .674-.13 1.342-.382 1.967l-4.49 11.112a1.75 1.75 0 1 0 3.245 1.311l4.04-9.995c.758-1.877 3.414-1.877 4.172 0l4.04 9.995a1.75 1.75 0 0 0 3.245-1.311l-4.487-11.105a5.3 5.3 0 0 1-.382-1.966v-4.972c0-.945.592-1.79 1.481-2.114l8.365-3.044a1.75 1.75 0 1 0-1.197-3.29l-10.398 3.785a6.5 6.5 0 0 1-2.751.609a6.5 6.5 0 0 1-2.751-.609"/></svg>            </span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 48 48"><path fill="black" d="M23.999 4.001c.69 0 1.25.56 1.25 1.25v2.5a1.25 1.25 0 0 1-2.5 0v-2.5c0-.69.56-1.25 1.25-1.25m10.023 20.046c0 5.509-4.466 9.975-9.975 9.975c-5.51 0-9.976-4.466-9.976-9.975c0-5.51 4.466-9.976 9.976-9.976c5.509 0 9.975 4.466 9.975 9.976m8.728 1.203a1.25 1.25 0 0 0 0-2.5h-2.5a1.25 1.25 0 0 0 0 2.5zM23.999 39c.69 0 1.25.56 1.25 1.25v2.5a1.25 1.25 0 0 1-2.5 0v-2.5c0-.69.56-1.25 1.25-1.25M7.75 25.25a1.25 1.25 0 1 0 0-2.5h-2.5a1.25 1.25 0 0 0 0 2.5zM9.366 9.366a1.25 1.25 0 0 1 1.768 0l2.5 2.5a1.25 1.25 0 1 1-1.768 1.768l-2.5-2.5a1.25 1.25 0 0 1 0-1.768m1.768 29.269a1.25 1.25 0 1 1-1.768-1.768l2.5-2.5a1.25 1.25 0 1 1 1.768 1.768zm27.5-29.269a1.25 1.25 0 0 0-1.767 0l-2.5 2.5a1.25 1.25 0 0 0 1.768 1.768l2.5-2.5a1.25 1.25 0 0 0 0-1.768m-1.767 29.269a1.25 1.25 0 1 0 1.768-1.768l-2.5-2.5a1.25 1.25 0 1 0-1.768 1.768z"/></svg>              </span>
                 </div>
+              </div>
+              <span className="text-xs">Night light</span>
+              </div>
+
+              <div className="text-center">
+              <div className="flex mt-3">
+                <div className=" flex rounded-s-md border-2 border-gray-200 justify-between bg-white pl-8 pr-8 pt-3 pb-3 text-center  cursor-pointer">
+                  <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.2em" viewBox="0 0 48 48"><path fill="black" d="M20.002 10.5a4 4 0 0 0 2.226 3.586l.492.179a3.75 3.75 0 0 0 2.566 0l.491-.179a4 4 0 1 0-5.775-3.586m-2.194 1.977A6.5 6.5 0 0 1 24.003 4a6.5 6.5 0 0 1 6.194 8.477l6.1-2.22a4.25 4.25 0 0 1 2.908 7.988l-8.201 2.985v4.796c0 .353.067.703.2 1.03L35.69 38.16a4.25 4.25 0 1 1-7.882 3.185l-3.807-9.422l-3.807 9.421a4.25 4.25 0 0 1-7.882-3.184l4.49-11.112c.132-.327.2-.677.2-1.03V21.23L8.8 18.245a4.25 4.25 0 1 1 2.907-7.987zm3.444 3.914l-10.399-3.784a1.75 1.75 0 0 0-1.197 3.289l8.365 3.044a2.25 2.25 0 0 1 1.481 2.114v4.964c0 .674-.13 1.342-.382 1.967l-4.49 11.112a1.75 1.75 0 1 0 3.245 1.311l4.04-9.995c.758-1.877 3.414-1.877 4.172 0l4.04 9.995a1.75 1.75 0 0 0 3.245-1.311l-4.487-11.105a5.3 5.3 0 0 1-.382-1.966v-4.972c0-.945.592-1.79 1.481-2.114l8.365-3.044a1.75 1.75 0 1 0-1.197-3.29l-10.398 3.785a6.5 6.5 0 0 1-2.751.609a6.5 6.5 0 0 1-2.751-.609"/></svg>            </span>
+                </div>
+              </div>
+              <span className="text-xs">Accessibility</span>
               </div>
 
             </div>
 
-       <div className="w-80 p-4 bg-gray-100 rounded-lg shadow-md flex items-center space-x-4">
+       <div className="w-80 p-4 rounded-lg flex items-center space-x-4">
       <div className="flex-shrink-0 text-gray-600">
       <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="black" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5V3m0 18v-2M7.05 7.05L5.636 5.636m12.728 12.728L16.95 16.95M5 12H3m18 0h-2M7.05 16.95l-1.414 1.414M18.364 5.636L16.95 7.05M16 12a4 4 0 1 1-8 0a4 4 0 0 1 8 0"/></svg>
       </div>
@@ -625,14 +645,14 @@ const Taskbar = () => {
         max="100"
         value={brightness}
         onChange={handleBrightnessChange}
-        className="w-full h-1 bg-gray-300 rounded-lg appearance-none cursor-pointer accent-blue-500"
+        className="w-full h-1 rounded-lg appearance-none cursor-pointer accent-blue-500"
         style={{
           background: `linear-gradient(to right, #2a6edb ${brightness}%, gray ${brightness}%)`,
         }}
      />
     </div>
 
-    <div className="w-80 mt-5 p-4 bg-gray-100 rounded-lg shadow-md flex items-center space-x-4">
+    <div className="w-80 mt-3 p-4 rounded-lg flex items-center space-x-4">
       <div className="flex-shrink-0 text-gray-600">
       <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="black" d="M15 1.29v21.42L5.737 17.5H1v-11h4.737zM4.999 8.5H3v7h1.999zm2 7.415L13 19.29V4.71L6.999 8.084zm13.98-8.933l.603.798a7 7 0 0 1-.003 8.44l-.603.798l-1.595-1.206l.603-.798a5 5 0 0 0 .002-6.03l-.603-.797zM18.186 9.09l.603.798a3.5 3.5 0 0 1-.001 4.22l-.604.798L16.59 13.7l.603-.797a1.5 1.5 0 0 0 .001-1.809l-.603-.798z"/></svg>     
       </div>
@@ -650,7 +670,7 @@ const Taskbar = () => {
       />
     </div>
 
-    <hr className="border-gray-300 mt-12"/>
+    <hr className="border-gray-300 mt-6"/>
 
     <div className=" flex mt-5 justify-between">
 
