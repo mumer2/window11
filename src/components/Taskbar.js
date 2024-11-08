@@ -64,7 +64,7 @@ const Taskbar = () => {
         </span>
 
         {isDropupOpen && (
-          <div className="absolute bottom-12 bg-gray-200 border-black-500 space-x-5 w-[600vm] h-[540vm] bg-white text-black center justify-center rounded-lg p-5 shadow-lg">
+          <div className="absolute bottom-12 bg-gray-200 border-black-500 space-x-5 w-[600vm] h-[540vm]  text-black center justify-center rounded-lg p-5 shadow-lg">
             <div className="m-5">
               <div className="flex items-center bg-white rounded-full border border-gray-300 p-1 mb-6">
                 <svg
@@ -303,7 +303,7 @@ const Taskbar = () => {
             </div>
           </div>
         )}
-        <span className="text-white cursor-pointer hover:bg-white pl-2 pr-2">
+        <span className="text-white cursor-pointer hover:bg-white pl-1 pr-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="1.8em"
