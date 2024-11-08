@@ -484,14 +484,13 @@ const Taskbar = () => {
         </span>
 
         {isIconDropupOpen && (
-          <div className="absolute flex gap-5 items-center right-72 bottom-16 bg-slate-200 w-[80] h-[40] text-black center justify-center border-4 rounded-lg p-3 shadow-lg">
+          <div className="absolute flex w-auto gap-5 items-center right-72 bottom-16 bg-slate-200 h-[40] text-black center justify-center border-4 rounded-lg p-3 shadow-lg">
          <span>
          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 26 26"><path fill="#85de4a" d="M23.633 5.028a1.07 1.07 0 0 0-.777-.366c-2.295-.06-5.199-2.514-7.119-3.477C14.551.592 13.768.201 13.18.098a1.2 1.2 0 0 0-.36.001c-.588.103-1.371.494-2.556 1.087c-1.92.962-4.824 3.416-7.119 3.476a1.08 1.08 0 0 0-.778.366a1.17 1.17 0 0 0-.291.834c.493 10.023 4.088 16.226 10.396 19.831c.164.093.346.141.527.141s.363-.048.528-.141c6.308-3.605 9.902-9.808 10.396-19.831a1.16 1.16 0 0 0-.29-.834M18.617 8.97l-5.323 7.855c-.191.282-.491.469-.788.469s-.629-.163-.838-.372l-3.752-3.753a.656.656 0 0 1 0-.926l.927-.929a.66.66 0 0 1 .926 0l2.44 2.44l4.239-6.257a.657.657 0 0 1 .91-.173l1.085.736a.657.657 0 0 1 .174.91"/></svg>
          </span>
          <span>
          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="#458cd9" d="M12 12h7c-.53 4.11-3.28 7.78-7 8.92zH5V6.3l7-3.11M12 1L3 5v6c0 5.55 3.84 10.73 9 12c5.16-1.27 9-6.45 9-12V5z"/></svg>
          </span>
-         
          </div>
          )}
 
