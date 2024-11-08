@@ -388,8 +388,8 @@ const MainLayout = () => {
               </div>
 
               {showDrives && (
-                <div className="ml-2 mt-2 space-y-2 bg-white">
-                  <div className="flex items-center bg-white  hover:bg-slate-200 gap-2 p-2 rounded">
+                <div className="ml-2 mt-2 space-y-2 w-full">
+                  <div className="flex items-center  hover:bg-slate-200 gap-2 p-2 rounded">
                     <span className=" relative">
                       <Image
                         className="absolute"
@@ -407,7 +407,7 @@ const MainLayout = () => {
                     </span>
                     <span>Local Disk (C:)</span>
                   </div>
-                  <div className="flex items-center bg-white hover:bg-slate-200 gap-2 p-2 bg-white rounded">
+                  <div className="flex items-center hover:bg-slate-200 gap-2 p-2 rounded">
                     <span>
                       <Image
                         src={"/images/harddisc1.png"}
