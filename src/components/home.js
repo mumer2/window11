@@ -26,7 +26,7 @@ const Home = () => {
             clipRule="evenodd"
           />
         </svg>
-        <h2 className="text-xs text-xs mb-4">Quick Access</h2>
+        <h2 className="text-xs mb-4">Quick Access</h2>
       </div>
 
       {showIcons && (
