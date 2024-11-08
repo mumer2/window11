@@ -718,7 +718,7 @@ const Taskbar = () => {
           </svg>
         </span>
         </div>
-        <div className=" flex items-center hover:bg-white p-1">
+        <div className=" flex items-right hover:bg-white p-1">
 
         <span className="text-xs">
           <DateTime />
