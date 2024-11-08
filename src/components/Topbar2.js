@@ -152,7 +152,7 @@ export const Topbar2 = () => {
           </span>
 
           <div
-            className="relative flex inline-block"
+            className="relative flex"
             onClick={toggleSortDropdown}
           >
             <span>
@@ -229,7 +229,7 @@ export const Topbar2 = () => {
           </div>
 
           <div
-            className="relative flex gap-2 inline-block"
+            className="relative flex gap-2"
             onClick={toggleViewDropdown}
           >
             <span>
