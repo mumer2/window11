@@ -35,10 +35,10 @@ const Taskbar = () => {
   };
 
   return (
-    <div className="fixed bottom-0 w-full h-12 bg-slate-200 z-50 flex justify-between items-center px-2 shadow-md">
-     <div className="grid grid-cols-3 gap-[7.4rem]">
+    <div className="fixed bottom-0 mt-2 left-0 w-full bg-slate-200 p-2 shadow-lg">
+    <div className="grid grid-cols-3 items-center gap-4">
       
-      <div className="flex items-left space-x-3 hover-bg-white ">
+    <div className="flex space-x-3 items-center justify-start">
         <Image
           className="ml-3"
           src={"/images/sun.png"}
@@ -47,8 +47,7 @@ const Taskbar = () => {
           alt="sun"
         />
       </div>
-
-      <div className="flex items-center space-x-2 ">
+      <div className="flex space-x-3 items-center justify-center">
         <span className="text-white hover:bg-white pl-2 pr-2 cursor-pointer" onClick={toggleDropup}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -459,8 +458,8 @@ const Taskbar = () => {
         </span>
       </div>
 
-      <div className="flex items-center">
-        <span className="text-xs ml-10 hover:bg-white">
+      <div className="flex space-x-3 items-center justify-end">
+        <span className="text-xs items-center hover:bg-white">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="3em"
@@ -473,7 +472,7 @@ const Taskbar = () => {
             />
           </svg>
         </span>
-        <span className="text-xs mr-4 hover:bg-white p-1">
+        <span className="text-xs hover:bg-white p-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="1.5em"
@@ -744,7 +743,7 @@ const Taskbar = () => {
           <DateTime />
         </span>
 
-        <span className="text-xs mr-3">
+        <span className="text-xs">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="1.3em"
